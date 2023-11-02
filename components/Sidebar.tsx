@@ -6,6 +6,7 @@ import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
+import Library from "./Library";
 
 interface SidebarProps {
     children: React.ReactNode;
@@ -32,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     ], [pathname]); // regenerate only when the pathname changes
 
     return (
-        <div className="flex h-hull">
+        <div className="flex h-full">   {/*  */}
             <div className="
                 hidden
                 md:flex
@@ -42,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 h-full 
                 w-[300px]
                 p-2
-                "
+                "   // this is the entire side bar portion. split in 2 after first 2 items.
             >
                 <Box>
                     <div
@@ -53,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                             px-5
                         "
                     >
-                        {routes.map((item) => (
+                        {routes.map((item) => ( // pre-gap contains home and search
                             <SidebarItem
                                 key={item.label}
                                 {...item}

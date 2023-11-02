@@ -11,11 +11,12 @@ const Box: React.FC<BoxProps> = ({
     className
 }) => {
     return (    // this allows us to resuse the Box component and pass in names using parameters
-        <div className={twMerge(`
-        bg-neutral-900
-        rounded-lg
-        h-fit
-        w-full
+        <div 
+            className={twMerge(`
+                bg-neutral-900
+                rounded-lg
+                h-fit
+                w-full
         `,
             className
         )}

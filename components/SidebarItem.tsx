@@ -10,7 +10,7 @@ interface SidebarItemProps {
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({  // pulling the interface attributes
-    icon: Icon,   
+    icon: Icon,    // create icon object 
     label,
     active,
     href
